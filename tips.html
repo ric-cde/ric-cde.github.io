@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="refresh" content="50">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Allergy Tips | Remedies, cures, and reliefs</title>
+        <link rel="stylesheet" href="styles.css" type="text/css">
+        <script src="https://kit.fontawesome.com/15e564ffc9.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://use.typekit.net/oml0yah.css">
+    </head>
+    <body>
+        <header>
+                <nav>
+                    <a href="index.html" id="banner" class=""><i class="fas fa-briefcase-medical"></i>  Allergy Tips <span class="home link-tag">Home</span></a>
+                    <a href="intro.html"  id="intro" class="">Intro  <span class="time link-tag">3 min</span></a>
+                    <a href="tips.html"  id="tips" class="tips-active">Tips</a>
+                    <div id="hamburger" class=""><i class="fas fa-caret-down"></i>
+                            <div class="dropdown-container">
+                                <div class="dropdown">
+                                    <a href="old.html"><i class="fas fa-bug"></i> Old Friends Hypothesis</li>
+                                    <a href="medical.html"><i class="fas fa-laptop-medical"></i> Medical Treatments</a>
+                                    <a href="about.html"><i class="fas fa-info"></i> About</li></a>
+                                </div>
+                            </div>
+                    </div>
+
+                </nav>
+        </header>
+        <div class="container">
+            <article>
+                <p>Filter by:</p>
+                <div class="filters">
+                    <button class="filter-button sinusitis" onclick="hideCard('sinusitis')">#Sinusitis</button>
+                    <button class="filter-button drynose" onclick="hideCard('drynose')">#DryNose</button>
+                    <button class="filter-button allergy" onclick="hideCard('allergy')">#Allergy</button>
+                    <button class="filter-button postnasal" onclick="hideCard('postnasal')">#PostNasalDrip</button>
+                    <button class="filter-button all" onclick="restoreCards()">#All</button>
+                </div>
+                <h2 class="symptoms-header relieving">RELIEVING SYMPTOMS</h2>
+
+                <card class="relieving">
+                    <div class="num"><div class="inner-num relieving">1</div></div>
+                    <div class="tip">Saline Rinse</div>
+                    <div class="tags">
+                        <span class="sinusitis tagged">#Sinusitis</span>
+                        <span class="allergy tagged">#Allergy</span>
+                        <span class="drynose tagged">#DryNose</span>
+                        <span class="postnasal tagged">#PostNasalDrip</span>
+                    </div>
+                    <div class="description"><p><strong>WHY:</strong> Washing your nose regularly with saline (salt water) helps to remove allergens, keep your nasal passages moisturised, and aids in tissue repair.</p>
+                            <p><strong>HOW:</strong> Buy premixed sachets or make your own saline solution by adding a teaspoon of salt to boiled water. Once cooled, tilt head sideways and use a squeeze bottle or neti pot to gently push the saline through one nostril. Repeat on the other side.</p>
+                    </div>
+                </card>
+                <card class="relieving">
+                    <div class="num"><div class="inner-num relieving">2</div></div>
+                    <div class="tip">Hot Showers</div>
+                    <div class="tags">
+                        <span class="sinusitis tagged">#Sinusitis</span>
+                        <span class="allergy tagged">#Allergy</span>
+                        <span class="drynose tagged">#DryNose</span>
+                    </div>
+                    <div class="description"><p><strong>WHY:</strong> Warm showers have a 2-for-1 effect for allergy sufferers. The steam helps open up the lungs while moisturising the nasal passages. They also help remove any allergens on the hair and skin picked up during the day.</p>
+                            <p><strong>HOW:</strong> The warmer, the better. Opt for a shower with an enclosure to maximis steam intake.</p>
+                    </div>
+                </card>
+                <card class="relieving">
+                    <div class="num"><div class="inner-num relieving">3</div></div>
+                    <div class="tip">Inhaling Steam</div>
+                    <div class="tags">
+                        <span class="sinusitis tagged">#Sinusitis</span>
+                    </div>
+                    <div class="description"><p><strong>WHY:</strong> As with showers, steam can open up the airways and provide relief - particularly or sinus pain.</p>
+                            <p><strong>HOW:</strong> Your weapon of choice may range from a pot over the gas, a kettle, a steam inhaler, or a bowl of just-boiled water and a tea towel. Add eucalyptus or Olbas oil for an additional decongestant effect.</p>
+                    </div>
+                </card>
+                <card class="relieving">
+                    <div class="num"><div class="inner-num relieving">4</div></div>
+                    <div class="tip">Toothpaste</div>
+                    <div class="tags">
+                        <span class="postnasal tagged">#PostNasalDrip</span>
+                    </div>
+                    <div class="description"><p><strong>WHY:</strong> Most toothpastes - particularly those with extra menthol - dissolve and help rduce mucus.<p>
+                            <p><strong>HOW:</strong> Brushing your teeth first thing in the morning, last at night, and at other inervals can greatly mitigate the impact of post-nasal drip.</p>
+                    </div>
+                </card>
+                <card class="relieving">
+                        <div class="num"><div class="inner-num relieving">5</div></div>
+                        <div class="tip">Chili Peppers <span class="hot word-tag">Hot</span></div>
+                        <div class="tags">
+                            <span class="sinusitis tagged">#Sinusitis</span>
+                            <span class="drynose tagged">#DryNose</span>
+                        </div>
+                        <div class="description"><p><strong>WHY:</strong> Capsaicin, a compound found in chili papers, stimulates the mucous membranes and helps relieve nasal congestion caused by non-allergic rhinitis. It may also facilitate temporary pain relief.</p>
+                                <p><strong>HOW:</strong> Simply eating spicy foods can help kickstart-your sinuses and get your nose running. Nasal-sprays containing capsaicin also now exist - although further study is needed to determine their efficacy.</p>
+                        </div>
+                    </card>
+
+                </card>
+
+                <h2 class="symptoms-header preventing">PREVENTING SYMPTOMS</h2>
+                <card class="preventing">
+                    <div class="num"><div class="inner-num preventing">1</div></div>
+                    <div class="tip">Washing Bedclothes</div>
+                    <div class="tags">
+                        <span class="allergy tagged">#Allergy</span>
+                    </div>
+                    <div class="description"><p><strong>WHY:</strong> Dust mites, one of the most common causes of allergic rhinitis, thrive in any type of fabric: particularly sheets.</p>
+                            <p><strong>HOW:</strong> Wash bedclothes at a high temperature weekly to both kill dust mites and remove the allergens they produce. Take particularly care to wash pillows: swapping in multiple spare pillow cases each week can greatly reduce overnight blocked nose and sleep apnea.</p>
+                    </div>
+                </card>
+                <card class="preventing">
+                    <div class="num"><div class="inner-num preventing">2</div></div>
+                    <div class="tip">Allergy-Proofing</div>
+                    <div class="tags">
+                        <span class="allergy tagged">#Allergy</span>
+                    </div>
+                    <div class="description"><p><strong>WHY:</strong> Dust mites, as well as animal dander and other allergens, thrive and become concentrated in fabrics of all kinds.</p>
+                            <p><strong>HOW:</strong> Swap carpets for hardwood floors, wash curtains semi-regularly at the highest heat possible, and reduce all other fabrics around the home - for example, loose clothes or rugs.</p>
+                    </div>
+                </card>
+                <card class="preventing">
+                    <div class="num"><div class="inner-num preventing">3</div></div>
+                    <div class="tip">Air Filters</div>
+                    <div class="tags">
+                        <span class="sinusitis tagged">#Sinusitis</span>
+                        <span class="allergy tagged">#Allergy</span>
+                    </div>
+                    <div class="description"><p><strong>WHY:</strong> A high-quality air filter is worth its weight in gold. It can strip all types of free-floating allergens from the air and, if carpets or pets cannot be avoided, it can go a long way to mitigating symptoms.</p>
+                            <p><strong>HOW:</strong> Choose a filter with multiple stages. For exapmle: pre-filter (ideal for animal dander), HEPA filter (removes dust and pollen), carbon filter (reduces odours), and UV light unit (kills mold spores).</p>
+                    </div>
+                </card>
+                <card class="preventing">
+                    <div class="num"><div class="inner-num preventing">4</div></div>
+                    <div class="tip">Fitness</div>
+                    <div class="tags">
+                        <span class="all tagged">#All</span>
+                    </div>
+                    <div class="description"><p><strong>WHY:</strong> Maintaining a high or even moderate level of aerobic fitness has an outsize influence on allergies and other respiratory issues.</p>
+                            <p><strong>HOW:</strong> Walking, jogging, and swimming all have merits depending on your climate. Walking can also aid in relieving symptoms because upright motion allows the sinuses to drain better. Jogging by the seaside is particularly effective at opening and moisturising the airways.</p>
+                    </div>
+                </card>
+                <card class="preventing">
+                    <div class="num"><div class="inner-num preventing">5</div></div>
+                    <div class="tip">Friendly Bacteria</div>
+                    <div class="tags">
+                        <span class="sinusitis tagged">#Sinusitis</span>
+                        <span class="allergy tagged">#Allergy</span>
+                        <span class="drynose tagged">#DryNose</span>
+                    </div>
+                    <div class="description"><p><strong>WHY:</strong> Recent research suggests having a diverse microbiome (the millions of bacteria in your gut and elsewhere may fortify the immune system and prevent some kinds of infections. </p>
+                            <p><strong>HOW:</strong> Kimchi is a natural <em>probiotic</em> (food-containing live bacteria) containing L. Sakei which may may alleviate sinusitis and promote healthful bacteria in the nasal passageways according to several trials. While there are many other different <em>probiotics</em> (containing live bacteria), <em>prebiotics</em> - fibre-containing foods which promote the growth of friendly bacteria - are thought to play the most important role in cultivating a healthy microbiome.</p>
+                    </div>
+                </card>        
+
+            </article>
+            <footer>
+                <div class="footer-container">
+                    <ul>
+                        <li>Home</li>
+                    </ul>
+                    <ul>
+                        <li>Introduction</li>
+                        <li>Tips</li>
+                    </ul>
+                    <ul>
+                        <li>Old Friends Hypothesis</li>
+                        <li>Medical treatments</li>
+                        <li>About</li>
+                    </ul>
+                </div>
+            </footer>
+            <script>
+            function hideCard(myIssue) {
+                console.log(myIssue);
+                var x = document.getElementsByClassName(myIssue+" tagged");
+                document.getElementsByClassName('symptoms-header preventing')[0].style.order = "2";
+                document.getElementsByClassName('symptoms-header relieving')[0].style.order = "2";
+                console.log(x);
+                var i;
+                var y = document.getElementsByTagName('card');
+                for (i = 0; i < y.length; i++) {
+                    y[i].style.display = 'none';
+                }
+                for (i = 0; i < x.length; i++) {
+                    var value = x[i].parentElement.parentElement;
+                    console.log(value);
+                    x[i].parentElement.parentElement.style.display = 'grid';
+                    x[i].parentElement.parentElement.style.order = '2';
+                }
+                }
+            function restoreCards(myIssue) {
+                document.getElementsByClassName('symptoms-header preventing')[0].style.order = "2";
+                document.getElementsByClassName('symptoms-header relieving')[0].style.order = "2";
+                var y = document.getElementsByTagName('card');
+                for (i = 0; i < y.length; i++) {
+                    y[i].style.display = 'grid';
+                    y[i].style.order = '2';
+                }
+            }
+            </script>
+        </div>
+    </body>
+</html>

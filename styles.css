@@ -1,0 +1,650 @@
+html, body {
+    height: 100%;
+    background-color: #eeeeee;
+    text-align: center;
+    font-family: 'Sofia-pro', 'Montserrat', Sans-serif, Arial;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+* {
+    border: 0px solid blueviolet;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*:hover {
+    /*color: #444;*/
+}
+
+.container {
+    display: grid;
+    grid-template-columns: minmax(0px, 1fr) minmax(300px, 1200px) minmax(0px, 1fr);
+    justify-content: center;
+    width: 100%;
+}
+
+/* NAVIGATION */
+
+
+header {
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    font-family: 'Sofia-pro', 'Montserrat', sans-serif;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 5em;
+    grid-template-rows: 5em auto;
+    justify-content: center;
+    min-height: 5em;
+    width: 100%;
+    max-width: 1200px;
+    font-size: 1em;
+    transition-duration: 1s;
+    background: white;
+    flex-wrap: wrap;
+}
+
+nav > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    vertical-align: middle;
+    box-sizing: content-box;
+}
+
+#banner {
+    flex: 3;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 1.5em;
+}
+
+#banner > i {
+    font-size: 1.5em;
+    margin-right: 3px;
+}
+
+#intro, #tips, #hamburgerz {
+    flex: 1;
+}
+
+.home-active {
+    background: lightcyan;
+    border-bottom: 3px solid #23a9f6;
+    color: #23a9f6;
+}
+
+.intro-active {
+    background: lightcyan;
+    border-bottom: 3px solid #23a9f6;
+    color: #23a9f6;
+    font-weight: 700;
+    transition: all 0.25s ease;
+}
+
+.tips-active {
+    border-bottom: 3px solid red;
+    background:#ffdae0;
+    color: red;
+    font-weight: 700;
+    transition: all 0.25s ease;
+}
+
+a#banner:hover {
+    background: lightcyan;
+    border-bottom: 3px solid #23a9f6;
+    color: #23a9f6;
+    transition: all 0.25s ease;
+    opacity: 100;
+}
+
+a#tips:hover {
+    border: 3px solid red;
+    border-top: none;
+    background:#ffdae0;
+    color: red;
+    font-weight: 700;
+    transition: all 0.25s ease;
+}
+
+a#intro:hover {
+    background: lightcyan;
+    border: 3px solid #23a9f6;
+    border-top: none;
+    color: #23a9f6;
+    font-weight: 700;
+    transition: all 0.25s ease;
+    margin-left: 1px;
+}
+
+.link-tag {
+    position: absolute;
+    top: 75%;
+    align-self: center;
+    margin-bottom: 8px;
+    padding: 1px 3px;
+    border-radius: 3px;
+    font-size: 0.6rem;
+    line-height: 1.3;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.word-tag {
+    vertical-align: super;
+    padding: 1px 3px;
+    border-radius: 3px;
+    font-size: 0.6rem;
+    line-height: 1.3;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+.time {
+    background: #23a9f6;
+    color: white;
+}
+
+.hot {
+    background:red;
+    color: white;
+}
+
+
+.home {
+    background: #23a9f6;
+    color: white;
+    opacity: 0;
+}
+
+a#banner:hover .home {
+    opacity: 100;
+}
+
+#hamburger {
+    width: 5em;
+    display: flex;
+}
+
+#hamburger > i {
+    font-size: 1.5em;
+}
+
+.dropdown-container {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    left: 0%;
+    font-size: 1.2em;
+    text-align: right;
+    transition: all 0.5s ease;
+    display: none;
+}
+
+.dropdown > a {
+    display: block;
+    width: 100%;
+    padding: 1em;
+}
+
+#hamburger:hover {
+    cursor: pointer;
+    background: lightcyan;
+    transition: all 0.25s ease;
+    color: #23a9f6;
+}
+
+#hamburger:hover .dropdown-container {
+    display: grid;
+    grid-template-columns: minmax(0px, 1fr) minmax(300px, 1200px) minmax(0px, 1fr);
+    transition: all 5s ease;
+    zgrid-template-rows: auto;
+}
+
+.dropdown {
+    grid-column: 2 / -2;
+    background: white;
+    zpadding-right: 1em;
+    box-shadow: 0 4px 5px rgba(0,0,0,0.16);
+}
+
+
+.dropdown > a:hover {
+    background: lightcyan;
+    transition: all 0.25s ease;
+    font-weight: 500;
+    color: #23a9f6;
+}
+
+.hide {
+    background: black;
+}
+
+/* MAIN */
+
+article {
+    padding-top: calc(5em + 30px);
+    background: #fff;
+    grid-column: 2 / -2;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(301px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+article p {
+    grid-column: 1 / -1;
+    padding-bottom: 15px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Sofia-pro';
+    font-weight: 300;
+}
+
+/*HOME*/
+
+article.home-grid {
+    gap: 0;
+}
+
+.titlebox {
+    grid-column: 1 / -1;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.titlebox > * {
+    min-width: 300px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.main-button {
+    display: block;
+    box-sizing: content-box;
+    border: 2px solid rgba(255, 0, 0, 0);
+    padding: 1rem 2rem;
+    font-family: 'Sofia-pro', sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out, transform 150ms ease;
+    width: 360px;
+    max-width: 80%;
+    border-radius: 3px;
+    color: white;
+    margin: auto;
+}
+
+.input-field {
+    display: inline-block;
+    box-sizing: content-box;
+    border: 2px solid lightgrey;
+    padding: 1rem 2rem;
+    font-family: 'Sofia-pro', sans-serif;
+    font-size: 1rem;
+    width: 360px;
+    max-width: 80%;
+    border-radius: 3px;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.16);
+    margin: 20px auto;
+}
+
+
+
+.tips-color {
+    background: red;
+}
+
+.intro-color {
+    background: #23a9f6;
+}
+
+.main-button.tips-color:hover,
+button:focus {
+    background:#ffdae0;
+    color: red;
+    border: 2px solid red;
+    font-weight: 900;
+}
+
+.main-button.intro-color:hover,
+button:focus {
+    background: lightcyan;
+    color: #23a9f6;
+    ;
+    font-weight: 900;
+    border: 2px solid #23a9f6;
+}
+
+
+p.subtitle {
+    max-width: 360px;
+}
+
+p.sub {
+    margin: 10px 0;
+    font-style: italic;
+    font-weight: 100;
+    font-size: 0.8rem;
+}
+
+
+.hero-pic > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.middle-pic > img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.intro-preview {
+    width: 100%;
+    background: lightcyan;
+    padding: 15px 50px;
+}
+
+.intro-preview > i {
+    font-size: 3em;
+    color: #23a9f6;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.grid-span {
+    grid-column: 1 / -1;
+}
+
+.middle-pic {
+    grid-column: 1 / -1;
+}
+
+.middle-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mail-list {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+
+/*TIPS*/
+
+.filter-button {
+    font-size: 1.2em;
+    border-radius: 0.2em;
+    padding: 0.3em;
+    color: white;
+    min-width: 7em;
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-bottom: 4px;
+}
+
+button.filter-button:hover {
+    border: 2px solid black;
+    color: black;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.16);
+}
+
+button.filter-button.all:hover {
+    color: darkgrey;
+    border: 2px solid darkgrey;
+}
+
+h2.symptoms-header {
+    grid-column: 1 / -1;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 5px;
+    width: 100%;
+}
+
+div.filters {
+    grid-column: 1 / -1;
+    margin-bottom: 1em;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    order: 1;
+}
+
+card {
+    max-width: 400px;
+    padding: 15px;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.16);
+    display: grid;
+    grid-template: 3em 3em auto / 1fr 3fr;
+    text-align: left;
+    align-items: flex-start;
+    transition: all 5s ease;
+}
+
+card > .num {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    font-weight: 600;
+    color: white;
+    padding: 10px;
+    align-self: center;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+card > .num > .inner-num {
+    margin: auto;
+    text-align: center;
+    font-size: 3em;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+}
+
+card > .tip {
+    align-self: center;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    font-size: 1.5em;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+card > .tags {
+    align-self: center;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    color: white;
+    font-size: 0.7em;
+}
+
+card > .description {
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
+    padding: 5px 15px;
+}
+
+card:hover {
+    background: lightcyan;
+}
+
+card p {
+    text-align: left;
+}
+
+.inner-num.relieving, h2.relieving {
+    background:  red;
+    color: #fff;
+    /* #F2003C */
+}
+
+.inner-num.preventing, h2.preventing {
+    background: #23a9f6;
+    color: white;
+}
+
+card.relieving {
+    order: 3;
+}
+
+card.preventing {
+    order: 4;
+}
+
+h2.symptoms-header.relieving {
+    order: 3;
+}
+
+h2.symptoms-header.preventing {
+    order: 4;
+}
+
+
+.tags > * {
+    padding: 3px;
+    border-radius: 3px;
+}
+
+.sinusitis {
+    background: slategray;
+}
+
+.allergy {
+    background: salmon;
+}
+
+.drynose {
+    background: lightgreen;
+}
+
+.postnasal {
+    background: slateblue;
+}
+
+.all {
+    background: #efefef;
+    border: 2px solid black;
+    color: black;
+}
+
+/* FOOTER */
+
+
+footer {
+    grid-column: 1 / -1;
+    min-height: 100px;
+    background: slategrey;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    font-size: 0.9em;
+}
+footer a {
+    color:#ddd;
+}
+
+footer a:hover {
+    color:#aaa;
+}
+
+.footer-container {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+    max-width: 1200px;
+    width: 100%;
+    flex-wrap: wrap;
+
+}
+
+.footer-container > ul {
+    list-style-type: none;
+    margin-bottom: 20px;
+    min-width: 300px;
+}
+
+.footer-container > ul > li
+{
+    margin-bottom: 5px;
+}
+
+
+footer > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pop-up {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    background:black;
+    color: white;
+    width: 100%;
+    bottom: 0%;
+    padding: 20px 10px;
+}
+
+.pop-up > div {
+
+}
+
+.pop-up-color {
+    background:white;
+    color: black;
+}
+
+.main-button.pop-up-color:hover,
+button:focus {
+    background: black;
+    color:white;
+    border: 2px solid white;
+    font-weight: 900;
+}
+
+.x-button {
+    position: fixed;
+    bottom: 0%;
+    right: 0%;
+    padding: 1rem;
+    background: white;
+    border: 2px solid black;
+}
