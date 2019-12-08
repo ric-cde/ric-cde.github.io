@@ -315,7 +315,7 @@ h3 {
     cursor: pointer;
     text-align: center;
     transition: background 250ms ease-in-out, transform 150ms ease;
-    width: 360px;
+    width: 301px;
     max-width: 80%;
     border-radius: 3px;
     color: white;
@@ -329,14 +329,12 @@ h3 {
     padding: 1rem 2rem;
     font-family: 'Sofia-pro', sans-serif;
     font-size: 1rem;
-    width: 360px;
+    width: 301px;
     max-width: 80%;
     border-radius: 3px;
     box-shadow: 0 3px 3px rgba(0,0,0,0.16);
     margin: 20px auto;
 }
-
-
 
 .tips-color {
     background: red;
@@ -401,10 +399,7 @@ p.sub {
     padding: 5px;
 }
 
-div.intro-preview.grid-span {
-    order: 5;
 
-}
 
 .grid-span {
     grid-column: 1 / -1;
