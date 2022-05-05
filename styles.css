@@ -29,8 +29,8 @@ body {
     column-gap: 0px;
     overflow: hidden;
     padding: 0px;
-    text-align: justify;
-    text-justify: newspaper;
+    /* text-align: justify; */
+    /* text-justify: newspaper; */
     white-space: pre-line;
     /* hyphens: auto; */
     background-color: rgb(232, 232, 232);
