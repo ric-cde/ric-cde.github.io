@@ -16,9 +16,9 @@ body {
 
 #container {
   height: 100%;
-  /* background-color: rgba(127, 255, 212, 0.3); */
+  background-color: #EDD1B0;
   margin: 0 auto;
-  max-width: 650px; /* Hide this to extend navbar full width */
+  max-width: 670px; /* Hide this to extend navbar full width */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -41,86 +41,101 @@ body {
     /* text-justify: newspaper; */
     white-space: pre-line;
     /* hyphens: auto; */
-    /* background-color: rgb(247, 247, 247); */
+    background-color: #EDD1B0;
     line-height: 1.5;
   }
 
-  @media only screen and (max-height: 500px) {
-    #article {
-      max-height: 90vh;
-    }
+@media only screen and (max-height: 500px) {
+  #article {
+    max-height: 90vh;
   }
-
-  p {
-    margin-block: 0px 0px;
-  }
-
-  nav {
-    /* margin: 0 auto; */
-    background-color: rgba(213, 247, 255, 0.3);
-    height: 6vh;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 1rem;
-    margin-bottom: 5px;
-  }
-  #next {
-    float: right;
-  }
-  #previous {
-    float: left;
-  }
-
-  button {
-    padding: 3px 20px;
-    font-weight: bold;
-    border: 0.5px solid rgb(34, 34, 34);
-    border-radius: 3px;
-    color: rgb(35, 35, 35);
-    background-color: rgb(234, 234, 234);
-    height: 100%;
-    font-size: 1rem;
-    box-shadow: 0 0 5px rgba(102, 102, 102, 0.163);
-  }
-
-  button:hover {
-    background-color: rgba(245, 245, 245,1);
 }
 
-  button:active {
-    background-color: #fff;
-    transform: translateY(1px);
-  }
+p {
+  margin-block: 0px 0px;
+}
+
+nav {
+  /* margin: 0 auto; */
+  background-color: rgba(213, 247, 255, 0.3);
+  height: 6vh;
+  width: 100%;
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center; */
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+/* #next {
+  float: right;
+}
+#previous {
+  float: left;
+} */
+
+button {
+  padding: 3px 20px;
+  font-weight: bold;
+  border: 0.5px solid rgb(34, 34, 34);
+  border-radius: 3px;
+  color: rgb(35, 35, 35);
+  background-color: rgb(234, 234, 234);
+  height: 100%;
+  font-size: 1rem;
+  box-shadow: 0 0 5px rgba(102, 102, 102, 0.163);
+}
+
+button:hover {
+  background-color: rgba(245, 245, 245,1);
+}
+
+button:active {
+  background-color: #fff;
+  transform: translateY(1px);
+}
 
 
+button:disabled {
+  background-color: lightgrey;
+  color: darkgrey;
+  border: none;
+}
 
-  button:disabled {
-    background-color: lightgrey;
-    color: darkgrey;
-    border: none;
-  }
+#status {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Necessary after switching to grid */ 
+  padding: 0 10px;
+}
+#progress {
+  width: 100%;
+  background-color: lightgray;
+  border-radius: 10px;
+}
 
-  #status {
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  #progress {
-    width: 100%;
-    background-color: lightgray;
-    border-radius: 10px;
-  }
-  
-  #progress_bar {
-    width: 0%;
-    height: 10px;
-    background-color: #e7881b;
-    border-radius: 10px;
-  }
+#progress_bar {
+  width: 0%;
+  height: 10px;
+  background-color: #e7881b;
+  border-radius: 10px;
+}
 
+#debugging {
+  display: none;
+}
+
+
+@media only screen and (min-width: 920px) {
   #debugging {
-    visibility: hidden;
+    display: block;
+    position: absolute;
+    right: 2%;
+    top: 2%;
+    background: pink;
+    padding: 10px;
   }
+}
