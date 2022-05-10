@@ -11,28 +11,38 @@ body {
 }
 
 :root {
-  --container-width: min(650px, 92vw);
+  --article-width: min(650px, 92vw);
 }
 
 #container {
   height: 100%;
   background-color: #EDD1B0;
   margin: 0 auto;
-  max-width: 670px; /* Hide this to extend navbar full width */
+  max-width: 690px; /* Hide this to extend navbar full width */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  box-shadow: 0 0 40px rgba(81, 81, 81, 0.2);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0.75;
+}
+100% {
+    opacity: 1;
+ }
 }
 
 #article { 
-    font-family:Arial, Helvetica, sans-serif;
-    max-width: var(--container-width);
-    margin: 10px 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: var(--article-width);
+    margin: 20px 20px;
     margin-top: 10px;
     margin-bottom: 5px;
     max-height: 100vh;
     column-count: 1;
-    column-width: var(--container-width);
+    column-width: var(--article-width);
     /* column-rule: 1px solid black; */
     column-gap: 0px;
     overflow: hidden;
@@ -57,7 +67,7 @@ p {
 
 nav {
   /* margin: 0 auto; */
-  background-color: rgba(213, 247, 255, 0.3);
+  background-color: rgba(213, 247, 255, 0.2);
   height: 6vh;
   width: 100%;
   /* display: flex;
@@ -81,24 +91,24 @@ button {
   border: 0.5px solid rgb(34, 34, 34);
   border-radius: 3px;
   color: rgb(35, 35, 35);
-  background-color: rgb(234, 234, 234);
+  background-color: #f7b05f;
   height: 100%;
   font-size: 1rem;
   box-shadow: 0 0 5px rgba(102, 102, 102, 0.163);
 }
 
+
 button:hover {
   background-color: rgba(245, 245, 245,1);
 }
 
-button:active {
+button:active  {
   background-color: #fff;
   transform: translateY(1px);
 }
 
-
 button:disabled {
-  background-color: lightgrey;
+  background-color: #EDD1B0;
   color: darkgrey;
   border: none;
 }
@@ -108,9 +118,13 @@ button:disabled {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* Necessary after switching to grid */ 
+  justify-content: space-evenly; /* Necessary after switching to grid */ 
   padding: 0 10px;
+  font-family: arial;
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.7);
 }
+
 #progress {
   width: 100%;
   background-color: lightgray;
@@ -120,8 +134,12 @@ button:disabled {
 #progress_bar {
   width: 0%;
   height: 10px;
-  background-color: #e7881b;
+  background-color: #f7b05f;
+  /* background-color: #fff; */
+  /* background-color: #e7881b; */
   border-radius: 10px;
+  transition: width 0.25s;
+  transition-timing-function: ease;
 }
 
 #debugging {
