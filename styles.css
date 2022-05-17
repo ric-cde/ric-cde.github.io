@@ -16,7 +16,7 @@ body {
 
 #container {
   height: 100%;
-  background-color: #EDD1B0;
+  background-color: #fffff6;
   margin: 0 auto;
   max-width: 690px; /* Hide this to extend navbar full width */
   display: flex;
@@ -51,7 +51,7 @@ body {
     /* text-justify: newspaper; */
     white-space: pre-line;
     /* hyphens: auto; */
-    background-color: #EDD1B0;
+    background-color: #fffff6;
     line-height: 1.5;
   }
 
