@@ -51,7 +51,8 @@ main {
     max-width: var(--article-width);
     margin: 0 var(--article-padding);
     padding-top: calc(var(--article-padding) - 0.5rem);
-    max-height: calc(100vh - 3rem);
+    padding-bottom: 0.5rem;
+    max-height: calc(100vh - 3.2rem);
     column-count: 1;
     column-width: var(--article-width);
     /* column-rule: 1px solid black; */
@@ -85,14 +86,14 @@ main {
 nav {
   /* margin: 0 auto; */
   background-color: rgba(213, 247, 255, 0.2);
-  height: 3rem;
+  height: 3.2rem;
   width: 100%;
   align-items: center;
   display: grid;
   grid-template-columns: auto 1fr auto;
   font-size: 1rem;
-  margin-bottom: 0;
-  padding: 5px;
+  margin: 0;
+  padding: 9px;
 }
 /* #next {
   float: right;
@@ -104,32 +105,43 @@ nav {
 .nav_button {
   padding: 3px 10px;
   font-weight: bold;
-  border: 0.5px solid rgb(34, 34, 34);
+  /* border: 0.5px solid rgb(34, 34, 34); */
+  border: 0px solid #f7b05f;
   border-radius: 3px;
-  color: rgb(35, 35, 35);
-  background-color: #f3c087;
+  /* color: rgb(35, 35, 35); */
+  color: #52411E;
+  background-color: #efac606f;
   height: 100%;
   font-size: 0.8rem;
-  box-shadow: 0 0 5px rgba(102, 102, 102, 0.163);
+
   line-height: normal;
   margin: auto;
   width: 7rem;
+  box-shadow: 0 0 10px rgba(102, 102, 102, 0.15);
+  /* transition: width 5s;
+  transition-timing-function: ease; */
+  transition: all ease-in-out .25s;
 }
 
 
 .nav_button:hover {
-  background-color: rgba(245, 245, 245,1);
+  /* background-color: rgba(245, 245, 245,1); */
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(102, 102, 102, 0.15);
 }
 
 .nav_button:active  {
   background-color: #fff;
   transform: translateY(1px);
+  box-shadow: 0 0 10px rgba(102, 102, 102, 0);
 }
 
 .nav_button:disabled {
-  background-color: #e7e3de;
+  transition: none;
+  background-color: #e7e3de00;
   color: darkgrey;
   border: none;
+  box-shadow: 0 0 10px rgba(102, 102, 102, 0.05);
 }
 
 #status {
@@ -138,9 +150,10 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around; /* Necessary after switching to grid */ 
+  justify-content: space-around;
   padding: 0 10px;
-  font-family: arial;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-variant: small-caps;
   font-size: 1rem;
   color: rgba(0, 0, 0, 0.7);
 }
@@ -153,12 +166,12 @@ nav {
 
 #progress_bar {
   width: 0%;
-  height: 10px;
+  height: 6px;
   background-color: #f7b05f;
   /* background-color: #fff; */
   /* background-color: #e7881b; */
   border-radius: 10px;
-  transition: width 0.25s;
+  transition: width 0.75s;
   transition-timing-function: ease;
 }
 
